@@ -1,0 +1,12 @@
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: tail -f /dev/null
+    ports:
+      - '${APP_PORT:-50000}:50000'
+    volumes:
+      - './:/opt/CosyVoice'
+      - './model_dir:/tmp/model_dir'
