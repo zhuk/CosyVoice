@@ -8,7 +8,7 @@ RUN apt-get update -y
 RUN apt-get -y install git unzip git-lfs
 RUN git lfs install
 
-COPY requirements.txt requirements.txt
+COPY requirements2.1.txt requirements.txt
 RUN pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com
 RUN export PYTHONPATH=third_party/Matcha-TTS
 
