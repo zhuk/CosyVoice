@@ -9,7 +9,6 @@ services:
       - '${APP_PORT:-50000}:50000'
     volumes:
       - './:/opt/CosyVoice'
-      - './model_dir:/tmp/model_dir'
     deploy:
       resources:
         reservations:
